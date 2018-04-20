@@ -1,0 +1,110 @@
+% various pre-defined settings used throughout the thesis
+% modify the include packages as required
+
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{subfigure}
+\usepackage{multirow}
+
+\usepackage{etoolbox}
+% Variant A
+\apptocmd{\sloppy}{\hbadness 10000\relax}{}{}
+% Variant B
+% \apptocmd{\thebibliography}{\raggedright}{}{}
+
+%\usepackage{caption}  %subfigure
+%\usepackage{subcaption} %subfigure
+
+% This style sheet modifies all headers to match the requirements for the School of Graduate Studies
+
+\usepackage{url}
+
+\newcommand{\etal}{\emph{et al.}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+
+\newcommand{\qed}{\ensuremath{\hfill \Box}}
+
+\newcommand{\XXXcite}{{\bf [CITE]}\marginpar{\bf$\leftarrow$CITE}}
+\newcommand{\XXXfigure}{{\bf [FIG]}\marginpar{\bf$\leftarrow$FIGURE}}
+\newcommand{\XXXnote}[1]{\renewcommand{\fboxsep}{1mm}\framebox{\textsf{\em #1}}\marginpar{\bf$\leftarrow$NOTE}}
+\newcommand{\XXXcontent}{{\medskip \center{\Huge \ldots} \marginpar{\bf$\leftarrow$MORE} \medskip}}
+
+% The first use of a term should define it. Use this to indicate
+% what is being defined.
+\newcommand{\inlinedef}[1]{{\em #1}}
+
+% Use this to describe the name of a software package
+\newcommand{\appname}[1]{{\sffamily #1}}
+% or a library
+\newcommand{\libname}[1]{{\sffamily #1}}
+% or a language
+\newcommand{\langname}[1]{#1}
+
+%\newcommand{\GSK}{\appname{GLu\-skap}}
+
+% Macros for talking about code:
+% The name of a code object or class.
+\newcommand{\objname}[1]{{\sffamily #1}}
+% The name of a method or function.
+\newcommand{\funcname}[1]{{\sffamily \em #1}}
+% The name of an object attribute.
+\newcommand{\attrname}[1]{\funcname{#1}}
+
+\newcommand{\bigO}[1]{\mathcal{O}(#1)}
+\newcommand{\littleo}[1]{o(#1)}
+%for changing font size-
+\renewcommand{\bibname}{\huge Bibliography}
+% Uncomment this line if the thesis is being stored in a Subversion repository
+%\usepackage[nofancy,notoday]{svninfo}
+
+   
+% This uses a modified version for headers/footers - very optional and may not be accepted by graduate studies
+%\usepackage{fancyhdr}
+%\pagestyle{fancyplain}
+%fancyhead[R,L]{}
+
+% Uncomment these lines to mark the thesis as a draft version
+%\lhead{}
+%\chead{}
+%\rhead{DRAFT}
+
+%\lfoot{}
+%\cfoot{\thepage}
+%\rfoot{}
+
+%\usepackage{listings}
+%\lstset{language=Python,basicstyle=\sffamily}
+%font part
+% pslatex does something neat to the font.
+%\usepackage{pslatex}
+%\usepackage{lmodern}
+%\usepackage[T1]{fontenc}
+%\fontfamily{cmr}
+%\renewcommand{\rmdefault}{ptm}
+
+% pdfpagemode
+% Determines how the file is opening in Acrobat; the possibilies are None,
+% UseThumbs (show thumbails), UseOutlines (show bookmarks), and FullScreen.
+% If no mode if explicitly chosen, but the bookmarks option is set,
+% UseOutlines is used.
+%
+
+%\usepackage[%
+%    bookmarksopen=true,%
+%    bookmarks=true,%
+%    pdfpagemode=UseOutlines,%
+%    pdfpagelabels,%
+%    plainpages=false,%
+%    colorlinks=true,%
+%    citecolor=cyan,%
+%    linkcolor=blue,%
+%    backref=false%
+%]{hyperref}
+% Document Metadata
+%\author{Sebastian Hanlon\\University of Lethbridge}
+%\title{Visualizing Three-Dimensional Graph Drawings}
+\author{Md Rakib Hossain \\University of Dhaka}
+\title{On the feasibility of Detecting Code Clones Using Interface Similarities}

@@ -1,0 +1,159 @@
+%THESIS
+
+% add 12pt
+\documentclass[a4paper,12pt]{report}
+
+\includeonly{
+0.TitlePage,
+0.SignaturePage,
+0.Dedication,
+0.Abstract,
+%0.Preface,
+0.Acknowledgement,
+0.ListOfPublications,
+1.Introduction,
+2.Background-Study,
+3.Literature-Reviews,
+description,
+4.Contributing-Chapter-1,
+5.Contributing-Chapter-2,
+6.Conclusion,
+Appendix,
+% Make sure to include all your actual tex files to be included here.
+preamble}
+\usepackage[left = 1.5 in, top = 1 in, right = 1 in]{geometry}
+\usepackage{setspace}
+%\usepackage{algorithm}
+%\usepackage{algpseudocode}
+%\usepackage{algorithmicx}
+\usepackage{enumitem}
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+\usepackage[procnumbered,ruled,linesnumbered,lined]{algorithm2e}
+\usepackage{amsmath}
+\usepackage{rotating}
+\usepackage{multicol}
+\usepackage{caption}
+\usepackage{listings}
+
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{%frame=single,
+	language=Java,
+	aboveskip=1mm,
+	belowskip=1mm,
+	showstringspaces=true,
+	columns=flexible,
+	basicstyle={\Normal\ttfamily},
+	numbers=left,
+	stepnumber=1,
+	numberstyle=\tiny\color{black},
+	keywordstyle=\color{blue},
+	commentstyle=\color{dkgreen},
+	stringstyle=\color{mauve},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=4
+}
+
+\lstset{
+basicstyle=\normalsize\ttfamily,
+columns=flexible,
+breaklines=true
+}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\graphicspath{ {images/} }
+
+\input{preamble}
+\begin{document}
+
+% Front matter: report style doesn't include \frontmatter
+\pagenumbering{roman}
+\include{0.TitlePage}
+\newpage
+
+\addcontentsline{toc}{chapter}{Approval}
+\include{0.SignaturePage}
+
+\newpage
+
+\addcontentsline{toc}{chapter}{Dedication}
+\include{0.Dedication}
+
+\newpage
+
+\addcontentsline{toc}{chapter}{Abstract}
+\doublespacing
+\include{0.Abstract}
+\singlespacing
+
+
+\newpage
+
+\addcontentsline{toc}{chapter}{Acknowledgements}
+\doublespacing
+\include{0.Acknowledgement}
+
+\newpage
+\addcontentsline{toc}{chapter}{List of Publications}
+\doublespacing
+\include{0.ListOfPublications}
+\singlespacing
+
+\newpage
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{3}
+
+\addcontentsline{toc}{chapter}{Table of Contents}
+
+\tableofcontents
+
+\newpage 
+
+\addcontentsline{toc}{chapter}{List of Tables}
+
+\listoftables
+
+\newpage 
+
+\addcontentsline{toc}{chapter}{List of Figures}
+
+\listoffigures
+
+\doublespacing
+% Main matter: report style doesn't include \mainmatter
+\clearpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+%THESIS:setspace and fullpage
+\doublespacing
+
+% This is the actual content of thesis. List all the chapters here
+\include {1.Introduction}
+\include {2.Background-Study}
+\include {3.Literature-Reviews}
+\include {description}
+\include {4.Contributing-Chapter-1}
+\include {5.Contributing-Chapter-2}
+\include {6.Conclusion}
+% include all the chapter, etc. here.
+
+%THESIS:setspace and fullpage
+\clearpage 
+
+\singlespacing
+\bibliographystyle{ieeetr}%plain, alpha, unsrt
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliography{reference}
+
+\newpage
+
+\end{document}
